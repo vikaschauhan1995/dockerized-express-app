@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = 8080;
+// const PORT = 8080;
 const userRouter = require('./routes/user');
 
 app.use((req, res, next) => {
@@ -14,6 +14,6 @@ app.get('/', (req, res) => {
 
 app.use(userRouter);
 
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}`);
+app.listen(process.env.PORT, () => {
+  console.log(`App listening on port ${process.env.PORT}`);
 });

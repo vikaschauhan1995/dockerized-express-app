@@ -2,7 +2,7 @@
 FROM node:18.14.0-alpine
 
 # Set working directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
 RUN npm install -g nodemon
 
@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Set environment varibles
-ENV PORT=
+ENV PORT=5000
 
 # Expose the port on which the app will run
 EXPOSE $PORT
